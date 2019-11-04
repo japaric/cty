@@ -23,7 +23,9 @@ pub use pwd::*;
           target_arch = "wasm64",
           target_arch = "powerpc",
           target_arch = "powerpc64",
-          target_arch = "s390x"))]
+          target_arch = "s390x",
+          target_arch = "riscv32",
+          target_arch = "riscv64"))]
 mod ad {
     pub type c_char = ::c_uchar;
 
