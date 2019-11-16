@@ -37,7 +37,8 @@ mod ad {
           target_arch = "x86",
           target_arch = "x86_64",
           target_arch = "nvptx",
-          target_arch = "nvptx64"))]
+          target_arch = "nvptx64",
+          target_arch = "xtensa"))]
 mod ad {
     pub type c_char = ::c_schar;
 
