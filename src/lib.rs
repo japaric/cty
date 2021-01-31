@@ -16,7 +16,7 @@ pub use od::*;
 // PWD = Pointer Width Dependent
 pub use pwd::*;
 
-#[cfg(any(target_arch = "aarch64",
+#[cfg(any(all(target_arch = "aarch64", not(target_os = "macos")),
           target_arch = "arm",
           target_arch = "asmjs",
           target_arch = "wasm32",
@@ -28,6 +28,16 @@ pub use pwd::*;
           target_arch = "riscv64"))]
 mod ad {
     pub type c_char = ::c_uchar;
+
+    pub type c_int = i32;
+    pub type c_uint = u32;
+}
+
+// TODO: Once https://github.com/rust-lang/rfcs/pull/2992 lands,
+// this should be extended to cover `aarch64-apple-ios-macabi`.
+#[cfg(all(target_arch = "aarch64", target_os = "macos"))]
+mod ad {
+    pub type c_char = ::c_schar;
 
     pub type c_int = i32;
     pub type c_uint = u32;
