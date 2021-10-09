@@ -5,6 +5,12 @@ This project adheres to $[Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [v0.2.2] - 2021-10-09
+
+### Fixed
+
+- fixed `c_char` on ARM64 macOS
+
 ## [v0.2.1] - 2019-11-16
 
 ### Added
@@ -56,7 +62,8 @@ This project adheres to $[Semantic Versioning](http://semver.org/).
 
 - Initial release
 
-[Unreleased]: https://github.com/japaric/cty/compare/v0.2.1...HEAD
+[Unreleased]: https://github.com/japaric/cty/compare/v0.2.2...HEAD
+[v0.2.2]: https://github.com/japaric/cty/compare/v0.2.1...v0.2.2
 [v0.2.1]: https://github.com/japaric/cty/compare/v0.2.0...v0.2.1
 [v0.2.0]: https://github.com/japaric/cty/compare/v0.1.5...v0.2.0
 [v0.1.5]: https://github.com/japaric/cty/compare/v0.1.4...v0.1.5
