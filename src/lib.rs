@@ -66,6 +66,14 @@ mod ad {
     pub type c_uint = u16;
 }
 
+#[cfg(target_arch = "avr")]
+mod ad {
+    pub type c_char = i8;
+    pub type c_int = i16;
+    pub type c_uint = u16;
+    // I hope the definitions for stuff like c_longlong are actually correct for AVR
+}
+
 // NOTE c_{,u}long definitions come from libc v0.2.3
 #[cfg(not(any(windows,
               target_os = "redox",
@@ -101,6 +109,9 @@ mod od {
 mod pwd {}
 
 #[cfg(target_pointer_width = "64")]
+mod pwd {}
+
+#[cfg(target_pointer_width = "16")]
 mod pwd {}
 
 pub type int8_t = i8;
