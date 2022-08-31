@@ -45,6 +45,7 @@ mod ad {
 
 #[cfg(any(target_arch = "mips",
           target_arch = "mips64",
+          target_arch = "loongarch64",
           target_arch = "sparc64",
           target_arch = "x86",
           target_arch = "x86_64",
